@@ -63,6 +63,9 @@ jobs:
         id: build-image
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          # github 부분은 코드에는 없음
+          # git commit 을 수행하고 push 하면 github 사이트에서
+          # commit 했을 때 생성된 해시 값을 가져오는데 이 값을 사용하는 것
           IMAGE_TAG: ${{ github.sha }}
         run: |
           # Build a docker container and
