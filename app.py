@@ -10,7 +10,7 @@ app = FastAPI()
 @app.get("/")
 async def welcomefunc() -> dict:
     return {
-        "message" : "welcome message"
+        "message" : "New welcome message"
     }
 
 # fastapi 객체가 라우터를 포함하도록 만듦
