@@ -49,11 +49,11 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with: # 자신의 IAM에 추가한 역할의 arn 사용
-          role-to-assume: arn:aws:iam::851528909564:role/RecommendSystem
+          role-to-assume: arn:aws:iam::851528909564:user/jongho
           role-session-name: RecommendSession # session 이름은 상관 없음
           aws-region: ap-northeast-2
 
-                
+
       # ECR 관련 부분 추가           
       - name: Login to Amazon ECR
         id: login-ecr
