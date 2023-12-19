@@ -21,7 +21,7 @@ response = requests.get(url, verify = False)
 result = json.loads(response.text)
 #print(response.content)
 print(response)
-#print(result)
+print(result)
 #print(type(result))
 
 # 필요한 날씨 데이터가 위치하는 카테고리 확인

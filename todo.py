@@ -11,6 +11,7 @@ from os import path
 from watch_recommend.recommend import watch_rec
 from smry_recommend.smry_recommend import smry_recommend
 from cast_recommend.cast_recommend import cast_recommend, cast_data
+from weather_recommend.weather_recommend import weather_recommend
 
 # 유효한 subsr
 subsr_list = [64154000, 64659000]
@@ -20,6 +21,9 @@ todo_router = APIRouter()
 
 #데이터를 저장할 list 생성
 todo_list = []
+
+# 날씨 기본값 설정 - 맑음, 비, 구름 3가지
+weather = '맑음'
 
 #todo 요청을 post 방식으로 요청한 경우 처리
 @todo_router.post("/todo")
@@ -71,7 +75,9 @@ async def get_subsr_id(subsr_id : int) -> dict:
 @todo_router.get("/todo")
 async def showrecommend():
     watch_result = watch_rec()
+    weather_result = weather_recommend(weather)
     return{
         "message" : "test success",
-        "watch based recommend result" : watch_result
+        "watch based recommend result" : watch_result,
+        "weather_recommend" : weather_result
     }
