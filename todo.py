@@ -25,6 +25,7 @@ todo_list = []
 # 날씨 기본값 설정 - 맑음, 비, 구름 3가지
 weather = '맑음'
 
+
 #todo 요청을 post 방식으로 요청한 경우 처리
 @todo_router.post("/todo")
 #매개변수를 받아서 todo_list에 삽입
@@ -74,10 +75,12 @@ async def get_subsr_id(subsr_id : int) -> dict:
 # 공통 추천인 시청 시간 기반 추천을 제공
 @todo_router.get("/todo")
 async def showrecommend():
+    # 날씨 추천 구문
+    weather_comment = weather + ' 날씨의 추천'
     watch_result = watch_rec()
     weather_result = weather_recommend(weather)
     return{
         "message" : "test success",
-        "watch based recommend result" : watch_result,
-        "weather_recommend" : weather_result
+        "watch based recommend " : watch_result,
+        weather_comment : weather_result
     }
