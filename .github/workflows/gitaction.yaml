@@ -16,10 +16,17 @@ permissions:
 env:
   AWS_REGION: ap-northeast-2
   ECR_REPOSITORY: recommendsystem
-  ECS_SERVICE: RecommendSystemV6
-  ECS_CLUSTER: recommendcluster                 
+  ECS_SERVICE: RecommendDeploy
+  ECS_CLUSTER: RecommendSystem                 
   ECS_TASK_DEFINITION: ./task-definition.json
-  CONTAINER_NAME: recommendsystem
+  CONTAINER_NAME: recommend
+
+  #AWS_REGION: ap-northeast-2
+  #ECR_REPOSITORY: recommendsystem
+  #ECS_SERVICE: RecommendSystemV6
+  #ECS_CLUSTER: recommendcluster                 
+  #ECS_TASK_DEFINITION: ./task-definition.json
+  #CONTAINER_NAME: recommendsystem
 
 jobs:
   build:
