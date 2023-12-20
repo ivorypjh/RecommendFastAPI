@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:851528909564:task-definition/RecommendSystem:1",
+    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:851528909564:task-definition/RecommendSystem:2",
     "containerDefinitions": [
         {
             "name": "recommend",
-            "image": "851528909564.dkr.ecr.ap-northeast-2.amazonaws.com/recommendsystem",
+            "image": "851528909564.dkr.ecr.ap-northeast-2.amazonaws.com/recommendsystem:11856a181a26b57c9e44c9c0d50c8b7731f37f52",
             "cpu": 0,
             "portMappings": [
                 {
@@ -16,10 +16,8 @@
             ],
             "essential": true,
             "environment": [],
-            "environmentFiles": [],
             "mountPoints": [],
             "volumesFrom": [],
-            "ulimits": [],
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
@@ -27,15 +25,14 @@
                     "awslogs-group": "/ecs/RecommendSystem",
                     "awslogs-region": "ap-northeast-2",
                     "awslogs-stream-prefix": "ecs"
-                },
-                "secretOptions": []
+                }
             }
         }
     ],
     "family": "RecommendSystem",
     "executionRoleArn": "arn:aws:iam::851528909564:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 1,
+    "revision": 2,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -78,7 +75,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2023-12-20T03:39:38.533Z",
-    "registeredBy": "arn:aws:iam::851528909564:root",
+    "registeredAt": "2023-12-20T08:00:08.596Z",
+    "registeredBy": "arn:aws:sts::851528909564:assumed-role/RecommendSystem/RecommendSession",
     "tags": []
 }
