@@ -38,7 +38,7 @@ async def add_data(todo: Todo) -> dict:
         # 이미 데이터 파일이 있는 경우 데이터 생성은 생략
         if path.exists(r"./cast_recommend/data/" + str(number) + ".csv"):
             return {
-                "message" : "이미 존재하는 데이터에 대한 입력"
+                "message" : "이미 존재하는 데이터"
             }
         # 데이터 파일이 없는 경우 데이터 파일을 생성
         else:
