@@ -186,6 +186,3 @@ def smry_recommend(subsr_num):
     #print('가장 유사한 장르는 ', min_detail_genre, sep = '')
     #print(genre_10[min_detail_genre])
     return(genre_10[min_detail_genre])
-
-d = smry_recommend(64659000)
-print(d)
