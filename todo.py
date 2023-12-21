@@ -63,7 +63,7 @@ async def get_subsr_id(subsr_id : int) -> dict:
             cast_result = cast_recommend(subsr)
             return {
                 "subsr" : subsr,
-                "genre_recommend" : smry_result,
+                "SMRY_recommend" : smry_result,
                 "cast_recommend" : cast_result
             }
 
