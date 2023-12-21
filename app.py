@@ -6,7 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
 
 # CORS 설정
-origins = ["http://recommendfromt.s3-website.ap-northeast-2.amazonaws.com"]  # 프론트엔드의 주소로 변경
+origins = ["http://recommendfromt.s3-website.ap-northeast-2.amazonaws.com", "http://localhost:3000"]  # 프론트엔드의 주소로 변경
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
